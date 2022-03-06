@@ -1,3 +1,8 @@
+#ifndef CPP_OP_H
+#define CPP_OP_H
+
+#include "CppLib.h"
+
 #include <stdint.h>
 #include "CppData.h"
 
@@ -32,7 +37,7 @@ inline bool InScope(ScopeFlags scope, ScopeFlags flags) {
     return (scope & flags) == scope;
 }
 
-class CppOp {
+class DLLEXPORT CppOp {
 public:
     static void Do(CppData &data, Operation op, ScopeFlags scope);
 
@@ -40,3 +45,4 @@ private:
     static void Reset(CppData &data, ScopeFlags scope);
     static void Increment(CppData& data, ScopeFlags scope);
 };
+#endif

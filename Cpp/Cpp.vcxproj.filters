@@ -21,15 +21,18 @@
     <ClInclude Include="inc\CppOp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="lib\inc\dllmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\CppLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\CppOp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="lib\dllmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="test\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

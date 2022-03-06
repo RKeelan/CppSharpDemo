@@ -1,6 +1,11 @@
+#ifndef CPP_DATA_H
+#define CPP_DATA_H
+
+#include "CppLib.h"
+
 #include <stdint.h>
 
-class CppData {
+class DLLEXPORT CppData {
 public:
     CppData() {}
 

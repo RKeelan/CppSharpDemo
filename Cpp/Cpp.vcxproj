@@ -20,12 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\CppData.h" />
+    <ClInclude Include="inc\CppLib.h" />
     <ClInclude Include="inc\CppOp.h" />
+    <ClInclude Include="lib\inc\dllmain.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\CppOp.cpp" />
     <ClCompile Include="lib\dllmain.cpp" />
-    <ClCompile Include="test\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -131,7 +132,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;CPP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CPP_EXPORTS=1;_DEBUG;CPP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
