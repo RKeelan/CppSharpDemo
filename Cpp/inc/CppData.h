@@ -60,5 +60,6 @@ private:
     float prv_f32 = 0.0;
     double prv_f64 = 0.0;
 
-    char prv_char = 0;
+    char prv_char = '\0';
 };
+#endif

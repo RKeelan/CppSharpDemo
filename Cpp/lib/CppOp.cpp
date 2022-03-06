@@ -41,7 +41,7 @@ void CppOp::Reset(CppData &data, ScopeFlags scope) {
     }
 
     if (InScope(scope, ScopeFlags::Char)) {
-        data.SetChar(0);
+        data.SetChar('\0');
     }
 }
 

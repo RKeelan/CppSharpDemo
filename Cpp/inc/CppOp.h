@@ -17,6 +17,7 @@ enum class ScopeFlags {
     Uint = (1 << 2),
     Float = (1 << 3),
     Char = (1 << 4),
+    All = (~0)
 };
 
 inline ScopeFlags operator|(ScopeFlags a, ScopeFlags b)
@@ -34,7 +35,7 @@ inline bool operator==(ScopeFlags a, ScopeFlags b)
 }
 
 inline bool InScope(ScopeFlags scope, ScopeFlags flags) {
-    return (scope & flags) == scope;
+    return (scope & flags) == flags;
 }
 
 class DLLEXPORT CppOp {
