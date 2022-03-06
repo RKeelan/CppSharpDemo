@@ -21,15 +21,11 @@
   <ItemGroup>
     <ClInclude Include="inc\CppData.h" />
     <ClInclude Include="inc\CppOp.h" />
-    <ClInclude Include="lib\inc\framework.h" />
-    <ClInclude Include="lib\inc\pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\CppOp.cpp" />
     <ClCompile Include="lib\dllmain.cpp" />
-    <ClCompile Include="lib\pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="test\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -137,7 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;CPP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
