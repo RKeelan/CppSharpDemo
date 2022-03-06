@@ -21,6 +21,19 @@ inline ScopeFlags operator|(ScopeFlags a, ScopeFlags b)
     return static_cast<ScopeFlags>(static_cast<uint>(a) | static_cast<uint>(b));
 }
 
+inline ScopeFlags operator&(ScopeFlags a, ScopeFlags b) {
+    return static_cast<ScopeFlags>(static_cast<uint>(a) & static_cast<uint>(b));
+}
+
+inline bool InScope(ScopeFlags scope, ScopeFlags flags) {
+    return (scope & flags) == scope;
+}
+
+inline ScopeFlags operator|(AnimalFlags a, AnimalFlags b)
+{
+    return static_cast<AnimalFlags>(static_cast<int>(a) | static_cast<int>(b));
+}
+
 class CppOp {
 public:
     static Do(CppData data, Operation op, ScopeFlags scope);
