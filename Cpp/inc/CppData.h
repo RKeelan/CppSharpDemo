@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 class CppData {
 public:
     CppData() {}
@@ -16,4 +18,4 @@ public:
 
     float pub_f32;
     float pub_f64;
-}
+};

@@ -1,3 +1,5 @@
+#include "pch.h"
+#include <stdexcept>
 #include "CppOp.h"
 
 void CppOp::Do(CppData &data, Operation op, ScopeFlags scope) {
@@ -7,12 +9,15 @@ void CppOp::Do(CppData &data, Operation op, ScopeFlags scope) {
         break;
 
     case Operation::Increment:
-        
+        break;
+
+    default:
+        throw std::invalid_argument("Operation op");
     }
 }
 
 void CppOp::Reset(CppData &data, ScopeFlags scope) {
-    if(InScope(scope, Scope::Public | Scope::Bool)) {
+    if(InScope(scope, (ScopeFlags::Public | ScopeFlags::Bool))) {
         data.pub_bool = false;
     }
 }
