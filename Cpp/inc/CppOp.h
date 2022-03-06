@@ -7,14 +7,11 @@ enum class Operation {
 };
 
 enum class ScopeFlags {
-    Public = (1 << 0),
-    Protected = (1 << 1),
-    Private = (1 << 2),
-    Bool = (1 << 3),
-    Int = (1 << 4),
-    Uint = (1 << 5),
-    Float = (1 << 6),
-    Char = (1 << 7),
+    Bool = (1 << 0),
+    Int = (1 << 1),
+    Uint = (1 << 2),
+    Float = (1 << 3),
+    Char = (1 << 4),
 };
 
 inline ScopeFlags operator|(ScopeFlags a, ScopeFlags b)
