@@ -14,7 +14,7 @@ namespace CppLib
 {
     public unsafe partial class CppData : IDisposable
     {
-        [StructLayout(LayoutKind.Sequential, Size = 56)]
+        [StructLayout(LayoutKind.Sequential, Size = 64)]
         public partial struct __Internal
         {
             internal byte prv_bool;
@@ -28,6 +28,9 @@ namespace CppLib
             internal float prv_f32;
             internal double prv_f64;
             internal sbyte prv_char;
+            internal char prv_wchar;
+            internal char prv_char16;
+            internal char prv_char32;
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "??0CppData@@QEAA@XZ", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr ctor(__IntPtr __instance);
@@ -101,6 +104,24 @@ namespace CppLib
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetChar@CppData@@QEAAXD@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SetChar(__IntPtr __instance, sbyte value);
+
+            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetWchar@CppData@@QEAA_WXZ", CallingConvention = __CallingConvention.Cdecl)]
+            internal static extern char GetWchar(__IntPtr __instance);
+
+            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetWchar@CppData@@QEAAX_W@Z", CallingConvention = __CallingConvention.Cdecl)]
+            internal static extern void SetWchar(__IntPtr __instance, char value);
+
+            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetChar16@CppData@@QEAA_SXZ", CallingConvention = __CallingConvention.Cdecl)]
+            internal static extern char GetChar16(__IntPtr __instance);
+
+            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetChar16@CppData@@QEAAX_S@Z", CallingConvention = __CallingConvention.Cdecl)]
+            internal static extern void SetChar16(__IntPtr __instance, char value);
+
+            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetChar32@CppData@@QEAA_UXZ", CallingConvention = __CallingConvention.Cdecl)]
+            internal static extern char GetChar32(__IntPtr __instance);
+
+            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetChar32@CppData@@QEAAX_U@Z", CallingConvention = __CallingConvention.Cdecl)]
+            internal static extern void SetChar32(__IntPtr __instance, char value);
         }
 
         public __IntPtr __Instance { get; protected set; }
@@ -186,7 +207,9 @@ namespace CppLib
             __Instance = IntPtr.Zero;
         }
 
-        public static sbyte CHAR_RESET_VALUE { get; } = '\x00';
+        public static char CHAR_RESET_VALUE { get; } = '\x00';
+
+        public static char WCHAR_RESET_VALUE { get; } = '\0';
 
         public bool Bool
         {
@@ -339,6 +362,48 @@ namespace CppLib
             set
             {
                 __Internal.SetChar(__Instance, value);
+            }
+        }
+
+        public char Wchar
+        {
+            get
+            {
+                var __ret = __Internal.GetWchar(__Instance);
+                return __ret;
+            }
+
+            set
+            {
+                __Internal.SetWchar(__Instance, value);
+            }
+        }
+
+        public char Char16
+        {
+            get
+            {
+                var __ret = __Internal.GetChar16(__Instance);
+                return __ret;
+            }
+
+            set
+            {
+                __Internal.SetChar16(__Instance, value);
+            }
+        }
+
+        public char Char32
+        {
+            get
+            {
+                var __ret = __Internal.GetChar32(__Instance);
+                return __ret;
+            }
+
+            set
+            {
+                __Internal.SetChar32(__Instance, value);
             }
         }
     }

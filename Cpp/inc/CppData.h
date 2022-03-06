@@ -5,11 +5,14 @@
 
 #include <stdint.h>
 
-#define CPP_DATA_NUMERIC_TYPE_RESET_VALUE 0
+#define CPP_DATA_NUMERIC_TYPE_RESET_VALUE   0
 
 class DLLEXPORT CppData {
 public:
-    static const char CHAR_RESET_VALUE = '\0';
+    // RK 06-Mar-2022: CppSharp maps "char" to "sbyte" in C#, which causes a compile error in the
+    // generated C# code, so I declare this as wchar_t even though it's for char
+    static const wchar_t CHAR_RESET_VALUE = '\0';
+    static const wchar_t WCHAR_RESET_VALUE = L'\0';
 
     CppData() {}
 
@@ -50,6 +53,15 @@ public:
     char GetChar() { return prv_char; }
     void SetChar(char value) { prv_char = value; }
 
+    wchar_t GetWchar() { return prv_wchar; }
+    void SetWchar(wchar_t value) { prv_wchar = value; }
+
+    char16_t GetChar16() { return prv_char16; }
+    void SetChar16(char16_t value) { prv_char16 = value; }
+
+    char32_t GetChar32() { return prv_char32; }
+    void SetChar32(char32_t value) { prv_char32 = value; }
+
 private:
     bool prv_bool = false;
 
@@ -68,5 +80,8 @@ private:
     double prv_f64 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
 
     char prv_char = CHAR_RESET_VALUE;
+    wchar_t prv_wchar = WCHAR_RESET_VALUE;
+    char16_t prv_char16 = CHAR_RESET_VALUE;
+    char32_t prv_char32 = CHAR_RESET_VALUE;
 };
 #endif

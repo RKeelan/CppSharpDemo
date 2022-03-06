@@ -43,6 +43,9 @@ void CppOp::Reset(CppData &data, ScopeFlags scope) {
 
     if (InScope(scope, ScopeFlags::Char)) {
         data.SetChar(CppData::CHAR_RESET_VALUE);
+        data.SetWchar(CppData::WCHAR_RESET_VALUE);
+        data.SetChar16(CppData::CHAR_RESET_VALUE);
+        data.SetChar32(CppData::CHAR_RESET_VALUE);
     }
 }
 
