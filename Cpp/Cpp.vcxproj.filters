@@ -21,9 +21,6 @@
     <ClInclude Include="inc\CppOp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lib\inc\dllmain.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="inc\CppLib.h">
       <Filter>Header Files</Filter>
     </ClInclude>

@@ -5,8 +5,12 @@
 
 #include <stdint.h>
 
+#define CPP_DATA_NUMERIC_TYPE_RESET_VALUE 0
+
 class DLLEXPORT CppData {
 public:
+    static const char CHAR_RESET_VALUE = '\0';
+
     CppData() {}
 
     bool GetBool() { return prv_bool; }
@@ -48,18 +52,18 @@ public:
 private:
     bool prv_bool = false;
 
-    int8_t prv_i8 = 0;
-    uint8_t prv_u8 = 0;
-    int16_t prv_i16 = 0;
-    uint16_t prv_u16 = 0;
-    int32_t prv_i32 = 0;
-    uint32_t prv_u32 = 0;
-    int64_t prv_i64 = 0;
-    uint64_t prv_u64 = 0;
+    int8_t prv_i8 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    uint8_t prv_u8 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    int16_t prv_i16 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    uint16_t prv_u16 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    int32_t prv_i32 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    uint32_t prv_u32 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    int64_t prv_i64 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    uint64_t prv_u64 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
 
-    float prv_f32 = 0.0;
-    double prv_f64 = 0.0;
+    float prv_f32 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    double prv_f64 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
 
-    char prv_char = '\0';
+    char prv_char = CHAR_RESET_VALUE;
 };
 #endif

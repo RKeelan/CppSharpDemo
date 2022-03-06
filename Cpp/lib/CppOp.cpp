@@ -22,26 +22,26 @@ void CppOp::Reset(CppData &data, ScopeFlags scope) {
     }
 
     if (InScope(scope, ScopeFlags::Int)) {
-        data.SetInt8(0);
-        data.SetInt16(0);
-        data.SetInt32(0);
-        data.SetInt64(0);
+        data.SetInt8(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetInt16(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetInt32(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetInt64(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
     }
 
     if (InScope(scope, ScopeFlags::Uint)) {
-        data.SetUint8(0);
-        data.SetUint16(0);
-        data.SetUint32(0);
-        data.SetUint64(0);
+        data.SetUint8(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetUint16(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetUint32(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetUint64(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
     }
 
     if (InScope(scope, ScopeFlags::Float)) {
-        data.SetFloat(0);
-        data.SetDouble(0);
+        data.SetFloat(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetDouble(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
     }
 
     if (InScope(scope, ScopeFlags::Char)) {
-        data.SetChar('\0');
+        data.SetChar(CppData::CHAR_RESET_VALUE);
     }
 }
 
