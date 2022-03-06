@@ -7,7 +7,8 @@ TEST(CppLib, Reset) {
 	CppData data;
 
     data.SetBool(true);
-    data.SetInt8(1);
+    // TODO RK 06-Mar-2022: See CppData.h
+    //data.SetInt8(1);
     data.SetInt16(2);
     data.SetInt32(3);
     data.SetInt64(4);
@@ -20,7 +21,8 @@ TEST(CppLib, Reset) {
     data.SetChar('R');
 
     EXPECT_NE(false, data.GetBool());
-    EXPECT_NE(0, data.GetInt8());
+    // TODO RK 06-Mar-2022: See CppData.h
+    //EXPECT_NE(0, data.GetInt8());
     EXPECT_NE(0, data.GetInt16());
     EXPECT_NE(0, data.GetInt32());
     EXPECT_NE(0, data.GetInt64());
@@ -35,7 +37,8 @@ TEST(CppLib, Reset) {
     CppOp::Do(data, Operation::Reset, ScopeFlags::All);
 
     EXPECT_EQ(false, data.GetBool());
-    EXPECT_EQ(0, data.GetInt8());
+    // TODO RK 06-Mar-2022: See CppData.h
+    //EXPECT_EQ(0, data.GetInt8());
     EXPECT_EQ(0, data.GetInt16());
     EXPECT_EQ(0, data.GetInt32());
     EXPECT_EQ(0, data.GetInt64());

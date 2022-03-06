@@ -16,8 +16,9 @@ public:
     bool GetBool() { return prv_bool; }
     void SetBool(bool value) { prv_bool = value; }
 
-    int8_t GetInt8() { return prv_i8; }
-    void SetInt8(int8_t value) { prv_i8 = value; }
+    // TODO RK 06-Mar-2022: See variable declaration
+    //int8_t GetInt8() { return prv_i8; }
+    //void SetInt8(int8_t value) { prv_i8 = value; }
 
     uint8_t GetUint8() { return prv_u8; }
     void SetUint8(uint8_t value) { prv_u8 = value; }
@@ -52,7 +53,9 @@ public:
 private:
     bool prv_bool = false;
 
-    int8_t prv_i8 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    // TODO RK 06-Mar-2022: Signed char does not seem to be supported by CppSharp:
+    // https://github.com/mono/CppSharp/issues/1622
+    //int8_t prv_i8 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
     uint8_t prv_u8 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
     int16_t prv_i16 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
     uint16_t prv_u16 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;

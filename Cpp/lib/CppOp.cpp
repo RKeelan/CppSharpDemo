@@ -22,7 +22,8 @@ void CppOp::Reset(CppData &data, ScopeFlags scope) {
     }
 
     if (InScope(scope, ScopeFlags::Int)) {
-        data.SetInt8(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        // TODO RK 06-Mar-2022: See CppData.h
+        //data.SetInt8(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
         data.SetInt16(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
         data.SetInt32(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
         data.SetInt64(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
@@ -52,7 +53,8 @@ void CppOp::Increment(CppData &data, ScopeFlags scope) {
     }
 
     if (InScope(scope, ScopeFlags::Int)) {
-        data.SetInt8(data.GetInt8() + 1);
+        // TODO RK 06-Mar-2022: See CppData.h
+        //data.SetInt8(data.GetInt8() + 1);
         data.SetInt16(data.GetInt16() + 1);
         data.SetInt32(data.GetInt32() + 1);
         data.SetInt64(data.GetInt64() + 1);
