@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cpp", "Cpp\Cpp.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppTest", "CppTest\CppTest.vcxproj", "{66796C38-921E-4C86-B0DD-F02FC5468F27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CppCsWrapper", "CppCsWrapper\CppCsWrapper.csproj", "{243BBB3F-0A5D-497D-AC7E-FB76B522AAF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsWrapper", "CsWrapper\CsWrapper.csproj", "{243BBB3F-0A5D-497D-AC7E-FB76B522AAF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrapperGen", "WrapperGen\WrapperGen.csproj", "{2BECFA73-9F4C-410C-80EF-2E220C462DAC}"
 EndProject
