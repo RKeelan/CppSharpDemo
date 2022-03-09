@@ -2,7 +2,7 @@
 <project>
 	<fileVersion>3</fileVersion>
 	<configuration>
-		<name>STM32H7_CM4</name>
+		<name>IarExe_CM4</name>
 		<toolchain>
 			<name>ARM</name>
 		</toolchain>
@@ -1483,7 +1483,7 @@
 		</debuggerPlugins>
 	</configuration>
 <configuration>
-		<name>STM32H7_CM7</name>
+		<name>IarExe_CM7</name>
 		<toolchain>
 			<name>ARM</name>
 		</toolchain>

@@ -2,7 +2,7 @@
 <project>
   <fileVersion>3</fileVersion>
   <configuration>
-    <name>STM32H7_CM4</name>
+    <name>IarExe_CM4</name>
     <toolchain>
       <name>ARM</name>
     </toolchain>
@@ -16,15 +16,15 @@
         <debug>1</debug>
         <option>
           <name>ExePath</name>
-          <state>STM32H7_CM4/Exe</state>
+          <state>IarExe_CM4/Exe</state>
         </option>
         <option>
           <name>ObjPath</name>
-          <state>STM32H7_CM4/Obj</state>
+          <state>IarExe_CM4/Obj</state>
         </option>
         <option>
           <name>ListPath</name>
-          <state>STM32H7_CM4/List</state>
+          <state>IarExe_CM4/List</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -656,7 +656,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state>STM32H7_CM4.hex</state>
+          <state>IarExe_CM4.hex</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -699,7 +699,7 @@
         <debug>1</debug>
         <option>
           <name>IlinkOutputFile</name>
-          <state>STM32H7_CM4.out</state>
+          <state>IarExe_CM4.out</state>
         </option>
         <option>
           <name>IlinkLibIOConfig</name>
@@ -1049,7 +1049,7 @@
     </settings>
   </configuration>
   <configuration>
-    <name>STM32H7_CM7</name>
+    <name>IarExe_CM7</name>
     <toolchain>
       <name>ARM</name>
     </toolchain>
@@ -1063,15 +1063,15 @@
         <debug>1</debug>
         <option>
           <name>ExePath</name>
-          <state>STM32H7_CM7/Exe</state>
+          <state>IarExe_CM7/Exe</state>
         </option>
         <option>
           <name>ObjPath</name>
-          <state>STM32H7_CM7/Obj</state>
+          <state>IarExe_CM7/Obj</state>
         </option>
         <option>
           <name>ListPath</name>
-          <state>STM32H7_CM7/List</state>
+          <state>IarExe_CM7/List</state>
         </option>
         <option>
           <name>GEndianMode</name>
@@ -1703,7 +1703,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state>STM32H7_CM7.hex</state>
+          <state>IarExe_CM7.hex</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -1746,7 +1746,7 @@
         <debug>1</debug>
         <option>
           <name>IlinkOutputFile</name>
-          <state>STM32H7_CM7.out</state>
+          <state>IarExe_CM7.out</state>
         </option>
         <option>
           <name>IlinkLibIOConfig</name>
@@ -2102,13 +2102,13 @@
       <file>
         <name>$PROJ_DIR$/startup_stm32h747xx_CM4.s</name>
         <excluded>
-          <configuration>STM32H7_CM7</configuration>
+          <configuration>IarExe_CM7</configuration>
         </excluded>
       </file>
       <file>
         <name>$PROJ_DIR$/startup_stm32h747xx_CM7.s</name>
         <excluded>
-          <configuration>STM32H7_CM4</configuration>
+          <configuration>IarExe_CM4</configuration>
         </excluded>
       </file>
     </group>
@@ -2117,7 +2117,7 @@
       <group>
         <name>CM4</name>
         <excluded>
-          <configuration>STM32H7_CM7</configuration>
+          <configuration>IarExe_CM7</configuration>
         </excluded>
         <file>
           <name>$PROJ_DIR$/../CM4/Src/main.c</name>
@@ -2132,7 +2132,7 @@
       <group>
         <name>CM7</name>
         <excluded>
-          <configuration>STM32H7_CM4</configuration>
+          <configuration>IarExe_CM4</configuration>
         </excluded>
         <file>
           <name>$PROJ_DIR$/../CM7/Src/main.c</name>

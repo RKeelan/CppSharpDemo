@@ -350,7 +350,7 @@ MigrationBackup/
 .ionide/
 IarWrapper/settings
 *.dep
-STM32H7/.mxproject
-STM32H7/EWARM/settings
-STM32H7/EWARM/STM32H7_CM7
-STM32H7/EWARM/STM32H7_CM4
+IarExe/.mxproject
+IarExe/EWARM/settings
+IarExe/EWARM/IarExe_CM7
+IarExe/EWARM/IarExe_CM4
