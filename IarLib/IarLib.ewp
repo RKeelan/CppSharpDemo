@@ -681,7 +681,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>IarWrapper.out</state>
+                    <state>IarLib.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -1039,7 +1039,7 @@
                 </option>
                 <option>
                     <name>IarchiveOutput</name>
-                    <state>C:\Work\External\RK\CppSharpDemo\IarWrapper\Debug\Exe\IarWrapper.a</state>
+                    <state>C:\Work\External\RK\CppSharpDemo\IarLib\Debug\Exe\IarLib.a</state>
                 </option>
             </data>
         </settings>
