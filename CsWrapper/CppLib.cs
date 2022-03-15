@@ -14,9 +14,15 @@ namespace CppLib
 {
     public unsafe partial class CppData : IDisposable
     {
-        [StructLayout(LayoutKind.Sequential, Size = 32)]
+        [StructLayout(LayoutKind.Sequential, Size = 64)]
         public partial struct __Internal
         {
+            internal byte pub_bool;
+            internal short pub_i16;
+            internal int pub_i32;
+            internal long pub_i64;
+            internal float pub_f32;
+            internal double pub_f64;
             internal byte prv_bool;
             internal short prv_i16;
             internal int prv_i32;
@@ -169,6 +175,84 @@ namespace CppLib
         public static char CHAR_RESET_VALUE { get; } = '\x00';
 
         public static char WCHAR_RESET_VALUE { get; } = '\0';
+
+        public bool PubBool
+        {
+            get
+            {
+                return ((__Internal*)__Instance)->pub_bool != 0;
+            }
+
+            set
+            {
+                ((__Internal*)__Instance)->pub_bool = (byte) (value ? 1 : 0);
+            }
+        }
+
+        public short PubI16
+        {
+            get
+            {
+                return ((__Internal*)__Instance)->pub_i16;
+            }
+
+            set
+            {
+                ((__Internal*)__Instance)->pub_i16 = value;
+            }
+        }
+
+        public int PubI32
+        {
+            get
+            {
+                return ((__Internal*)__Instance)->pub_i32;
+            }
+
+            set
+            {
+                ((__Internal*)__Instance)->pub_i32 = value;
+            }
+        }
+
+        public long PubI64
+        {
+            get
+            {
+                return ((__Internal*)__Instance)->pub_i64;
+            }
+
+            set
+            {
+                ((__Internal*)__Instance)->pub_i64 = value;
+            }
+        }
+
+        public float PubF32
+        {
+            get
+            {
+                return ((__Internal*)__Instance)->pub_f32;
+            }
+
+            set
+            {
+                ((__Internal*)__Instance)->pub_f32 = value;
+            }
+        }
+
+        public double PubF64
+        {
+            get
+            {
+                return ((__Internal*)__Instance)->pub_f64;
+            }
+
+            set
+            {
+                ((__Internal*)__Instance)->pub_f64 = value;
+            }
+        }
 
         public bool Bool
         {

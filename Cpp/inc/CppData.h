@@ -9,6 +9,7 @@
 
 class DLLEXPORT CppData {
 public:
+    static int32_t Counter;
     // RK 06-Mar-2022: CppSharp maps "char" to "sbyte" in C#, which causes a compile error in the
     // generated C# code, so I declare this as wchar_t even though it's for char
     static const wchar_t CHAR_RESET_VALUE = '\0';
@@ -61,7 +62,28 @@ public:
 
     //char32_t GetChar32() { return prv_char32; }
     //void SetChar32(char32_t value) { prv_char32 = value; }
+    
+    bool pub_bool = false;
 
+    // TODO RK 06-Mar-2022: Signed char does not seem to be supported by CppSharp:
+    // https://github.com/mono/CppSharp/issues/1622
+    //int8_t pub_i8 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    //uint8_t pub_u8 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    int16_t pub_i16 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    //uint16_t pub_u16 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    int32_t pub_i32 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    //uint32_t pub_u32 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    int64_t pub_i64 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    //uint64_t pub_u64 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+
+    float pub_f32 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+    double pub_f64 = CPP_DATA_NUMERIC_TYPE_RESET_VALUE;
+
+    //char pub_char = CHAR_RESET_VALUE;
+    //wchar_t pub_wchar = WCHAR_RESET_VALUE;
+    //char16_t pub_char16 = CHAR_RESET_VALUE;
+    //char32_t pub_char32 = CHAR_RESET_VALUE;
+    
 private:
     bool prv_bool = false;
 
