@@ -19,9 +19,8 @@ namespace WrapperGen
             string cppProjectDir = Path.Join(solutionPath, "Cpp");
             Console.WriteLine($"Cpp project directory: {cppProjectDir}");
 
-            string csOutputDir = Path.Combine(solutionPath, "CppCsWrapper");
+            string csOutputDir = Path.Combine(solutionPath, "CsWrapper");
             Console.WriteLine($"C# output directory: {csOutputDir}");
-
             ConsoleDriver.Run(new CppLibrary(cppProjectDir, csOutputDir, GeneratorKind.CSharp));
 
             Console.WriteLine("Done.");
