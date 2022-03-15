@@ -14,23 +14,15 @@ namespace CppLib
 {
     public unsafe partial class CppData : IDisposable
     {
-        [StructLayout(LayoutKind.Sequential, Size = 64)]
+        [StructLayout(LayoutKind.Sequential, Size = 32)]
         public partial struct __Internal
         {
             internal byte prv_bool;
-            internal byte prv_u8;
             internal short prv_i16;
-            internal ushort prv_u16;
             internal int prv_i32;
-            internal uint prv_u32;
             internal long prv_i64;
-            internal ulong prv_u64;
             internal float prv_f32;
             internal double prv_f64;
-            internal sbyte prv_char;
-            internal char prv_wchar;
-            internal char prv_char16;
-            internal char prv_char32;
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "??0CppData@@QEAA@XZ", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr ctor(__IntPtr __instance);
@@ -45,23 +37,11 @@ namespace CppLib
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetBool@CppData@@QEAAX_N@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SetBool(__IntPtr __instance, bool value);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetUint8@CppData@@QEAAEXZ", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern byte GetUint8(__IntPtr __instance);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetUint8@CppData@@QEAAXE@Z", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern void SetUint8(__IntPtr __instance, byte value);
-
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetInt16@CppData@@QEAAFXZ", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern short GetInt16(__IntPtr __instance);
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetInt16@CppData@@QEAAXF@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SetInt16(__IntPtr __instance, short value);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetUint16@CppData@@QEAAGXZ", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern ushort GetUint16(__IntPtr __instance);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetUint16@CppData@@QEAAXG@Z", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern void SetUint16(__IntPtr __instance, ushort value);
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetInt32@CppData@@QEAAHXZ", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int GetInt32(__IntPtr __instance);
@@ -69,23 +49,11 @@ namespace CppLib
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetInt32@CppData@@QEAAXH@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SetInt32(__IntPtr __instance, int value);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetUint32@CppData@@QEAAIXZ", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern uint GetUint32(__IntPtr __instance);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetUint32@CppData@@QEAAXI@Z", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern void SetUint32(__IntPtr __instance, uint value);
-
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetInt64@CppData@@QEAA_JXZ", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern long GetInt64(__IntPtr __instance);
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetInt64@CppData@@QEAAX_J@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SetInt64(__IntPtr __instance, long value);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetUint64@CppData@@QEAA_KXZ", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern ulong GetUint64(__IntPtr __instance);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetUint64@CppData@@QEAAX_K@Z", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern void SetUint64(__IntPtr __instance, ulong value);
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetFloat@CppData@@QEAAMXZ", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern float GetFloat(__IntPtr __instance);
@@ -98,30 +66,6 @@ namespace CppLib
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetDouble@CppData@@QEAAXN@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SetDouble(__IntPtr __instance, double value);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetChar@CppData@@QEAADXZ", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern sbyte GetChar(__IntPtr __instance);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetChar@CppData@@QEAAXD@Z", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern void SetChar(__IntPtr __instance, sbyte value);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetWchar@CppData@@QEAA_WXZ", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern char GetWchar(__IntPtr __instance);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetWchar@CppData@@QEAAX_W@Z", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern void SetWchar(__IntPtr __instance, char value);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetChar16@CppData@@QEAA_SXZ", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern char GetChar16(__IntPtr __instance);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetChar16@CppData@@QEAAX_S@Z", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern void SetChar16(__IntPtr __instance, char value);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetChar32@CppData@@QEAA_UXZ", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern char GetChar32(__IntPtr __instance);
-
-            [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetChar32@CppData@@QEAAX_U@Z", CallingConvention = __CallingConvention.Cdecl)]
-            internal static extern void SetChar32(__IntPtr __instance, char value);
         }
 
         public __IntPtr __Instance { get; protected set; }
@@ -207,6 +151,21 @@ namespace CppLib
             __Instance = IntPtr.Zero;
         }
 
+        public static int Counter
+        {
+            get
+            {
+                var __ptr = (int*)global::CppLib.__Symbols.CppLib._Counter_CppData__2HA;
+                return *__ptr;
+            }
+
+            set
+            {
+                var __ptr = (int*)global::CppLib.__Symbols.CppLib._Counter_CppData__2HA;
+                *__ptr = value;
+            }
+        }
+
         public static char CHAR_RESET_VALUE { get; } = '\x00';
 
         public static char WCHAR_RESET_VALUE { get; } = '\0';
@@ -225,20 +184,6 @@ namespace CppLib
             }
         }
 
-        public byte Uint8
-        {
-            get
-            {
-                var __ret = __Internal.GetUint8(__Instance);
-                return __ret;
-            }
-
-            set
-            {
-                __Internal.SetUint8(__Instance, value);
-            }
-        }
-
         public short Int16
         {
             get
@@ -250,20 +195,6 @@ namespace CppLib
             set
             {
                 __Internal.SetInt16(__Instance, value);
-            }
-        }
-
-        public ushort Uint16
-        {
-            get
-            {
-                var __ret = __Internal.GetUint16(__Instance);
-                return __ret;
-            }
-
-            set
-            {
-                __Internal.SetUint16(__Instance, value);
             }
         }
 
@@ -281,20 +212,6 @@ namespace CppLib
             }
         }
 
-        public uint Uint32
-        {
-            get
-            {
-                var __ret = __Internal.GetUint32(__Instance);
-                return __ret;
-            }
-
-            set
-            {
-                __Internal.SetUint32(__Instance, value);
-            }
-        }
-
         public long Int64
         {
             get
@@ -306,20 +223,6 @@ namespace CppLib
             set
             {
                 __Internal.SetInt64(__Instance, value);
-            }
-        }
-
-        public ulong Uint64
-        {
-            get
-            {
-                var __ret = __Internal.GetUint64(__Instance);
-                return __ret;
-            }
-
-            set
-            {
-                __Internal.SetUint64(__Instance, value);
             }
         }
 
@@ -348,62 +251,6 @@ namespace CppLib
             set
             {
                 __Internal.SetDouble(__Instance, value);
-            }
-        }
-
-        public sbyte Char
-        {
-            get
-            {
-                var __ret = __Internal.GetChar(__Instance);
-                return __ret;
-            }
-
-            set
-            {
-                __Internal.SetChar(__Instance, value);
-            }
-        }
-
-        public char Wchar
-        {
-            get
-            {
-                var __ret = __Internal.GetWchar(__Instance);
-                return __ret;
-            }
-
-            set
-            {
-                __Internal.SetWchar(__Instance, value);
-            }
-        }
-
-        public char Char16
-        {
-            get
-            {
-                var __ret = __Internal.GetChar16(__Instance);
-                return __ret;
-            }
-
-            set
-            {
-                __Internal.SetChar16(__Instance, value);
-            }
-        }
-
-        public char Char32
-        {
-            get
-            {
-                var __ret = __Internal.GetChar32(__Instance);
-                return __ret;
-            }
-
-            set
-            {
-                __Internal.SetChar32(__Instance, value);
             }
         }
     }
@@ -537,3 +384,18 @@ namespace CppLib
         }
     }
 }
+namespace CppLib.__Symbols
+{
+    internal class CppLib
+    {
+        public static IntPtr _Counter_CppData__2HA { get; }
+        static CppLib()
+        {
+            var path = "CppLib";
+            var image = CppSharp.SymbolResolver.LoadImage(ref path);
+            if (image == IntPtr.Zero) throw new global::System.DllNotFoundException(path);
+            _Counter_CppData__2HA = CppSharp.SymbolResolver.ResolveSymbol(image, "?Counter@CppData@@2HA");
+        }
+    }
+}
+
