@@ -8,8 +8,7 @@ TEST(CppLib, Reset) {
 
     data.SetBool(true);
 
-    // TODO RK 06-Mar-2022: See CppData.h
-    //data.SetInt8(1);
+    data.SetInt8(1);
     data.SetInt16(2);
     data.SetInt32(3);
     data.SetInt64(4);
@@ -29,8 +28,7 @@ TEST(CppLib, Reset) {
 
     EXPECT_NE(false, data.GetBool());
 
-    // TODO RK 06-Mar-2022: See CppData.h
-    //EXPECT_NE(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt8());
+    EXPECT_NE(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt8());
     EXPECT_NE(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt16());
     EXPECT_NE(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt32());
     EXPECT_NE(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt64());
@@ -50,8 +48,7 @@ TEST(CppLib, Reset) {
 
     EXPECT_EQ(false, data.GetBool());
 
-    // TODO RK 06-Mar-2022: See CppData.h
-    //EXPECT_EQ(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt8());
+    EXPECT_EQ(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt8());
     EXPECT_EQ(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt16());
     EXPECT_EQ(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt32());
     EXPECT_EQ(CPP_DATA_NUMERIC_TYPE_RESET_VALUE, data.GetInt64());

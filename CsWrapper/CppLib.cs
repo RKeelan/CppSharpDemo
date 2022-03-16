@@ -18,12 +18,14 @@ namespace CppLib
         public partial struct __Internal
         {
             internal byte pub_bool;
+            internal sbyte pub_i8;
             internal short pub_i16;
             internal int pub_i32;
             internal long pub_i64;
             internal float pub_f32;
             internal double pub_f64;
             internal byte prv_bool;
+            internal sbyte prv_i8;
             internal short prv_i16;
             internal int prv_i32;
             internal long prv_i64;
@@ -42,6 +44,12 @@ namespace CppLib
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?SetBool@CppData@@QEAAX_N@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SetBool(__IntPtr __instance, bool value);
+
+            [SuppressUnmanagedCodeSecurity, DllImport("CppLib", EntryPoint = "?GetInt8@CppData@@QEAACXZ", CallingConvention = __CallingConvention.Cdecl)]
+            internal static extern sbyte GetInt8(__IntPtr __instance);
+
+            [SuppressUnmanagedCodeSecurity, DllImport("CppLib", EntryPoint = "?SetInt8@CppData@@QEAAXC@Z", CallingConvention = __CallingConvention.Cdecl)]
+            internal static extern void SetInt8(__IntPtr __instance, sbyte value);
 
             [SuppressUnmanagedCodeSecurity, DllImport("Cpp", EntryPoint = "?GetInt16@CppData@@QEAAFXZ", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern short GetInt16(__IntPtr __instance);
@@ -78,6 +86,16 @@ namespace CppLib
 
         internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::CppLib.CppData> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::CppLib.CppData>();
 
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::CppLib.CppData managed)
+        {
+            NativeToManagedMap[native] = managed;
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::CppLib.CppData managed)
+        {
+            return NativeToManagedMap.TryGetValue(native, out managed);
+        }
+
         protected bool __ownsNativeInstance;
 
         internal static CppData __CreateInstance(__IntPtr native, bool skipVTables = false)
@@ -89,11 +107,11 @@ namespace CppLib
         {
             if (native == __IntPtr.Zero)
                 return null;
-            if (NativeToManagedMap.TryGetValue(native, out var managed))
+            if (__TryGetNativeToManagedMapping(native, out var managed))
                 return (CppData)managed;
             var result = __CreateInstance(native, skipVTables);
             if (saveInstance)
-                NativeToManagedMap[native] = result;
+                __RecordNativeToManagedMapping(native, result);
             return result;
         }
 
@@ -113,7 +131,7 @@ namespace CppLib
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected CppData(void* native, bool skipVTables = false)
@@ -127,7 +145,7 @@ namespace CppLib
         {
             __Instance = Marshal.AllocHGlobal(sizeof(global::CppLib.CppData.__Internal));
             __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
+            __RecordNativeToManagedMapping(__Instance, this);
             __Internal.ctor(__Instance);
         }
 
@@ -135,7 +153,7 @@ namespace CppLib
         {
             __Instance = Marshal.AllocHGlobal(sizeof(global::CppLib.CppData.__Internal));
             __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
+            __RecordNativeToManagedMapping(__Instance, this);
             *((global::CppLib.CppData.__Internal*) __Instance) = *((global::CppLib.CppData.__Internal*) _0.__Instance);
         }
 
@@ -186,6 +204,19 @@ namespace CppLib
             set
             {
                 ((__Internal*)__Instance)->pub_bool = (byte) (value ? 1 : 0);
+            }
+        }
+
+        public sbyte PubI8
+        {
+            get
+            {
+                return ((__Internal*)__Instance)->pub_i8;
+            }
+
+            set
+            {
+                ((__Internal*)__Instance)->pub_i8 = value;
             }
         }
 
@@ -265,6 +296,20 @@ namespace CppLib
             set
             {
                 __Internal.SetBool(__Instance, value);
+            }
+        }
+
+        public sbyte Int8
+        {
+            get
+            {
+                var __ret = __Internal.GetInt8(__Instance);
+                return __ret;
+            }
+
+            set
+            {
+                __Internal.SetInt8(__Instance, value);
             }
         }
 
@@ -375,6 +420,16 @@ namespace CppLib
 
         internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::CppLib.CppOp> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::CppLib.CppOp>();
 
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::CppLib.CppOp managed)
+        {
+            NativeToManagedMap[native] = managed;
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::CppLib.CppOp managed)
+        {
+            return NativeToManagedMap.TryGetValue(native, out managed);
+        }
+
         protected bool __ownsNativeInstance;
 
         internal static CppOp __CreateInstance(__IntPtr native, bool skipVTables = false)
@@ -386,11 +441,11 @@ namespace CppLib
         {
             if (native == __IntPtr.Zero)
                 return null;
-            if (NativeToManagedMap.TryGetValue(native, out var managed))
+            if (__TryGetNativeToManagedMapping(native, out var managed))
                 return (CppOp)managed;
             var result = __CreateInstance(native, skipVTables);
             if (saveInstance)
-                NativeToManagedMap[native] = result;
+                __RecordNativeToManagedMapping(native, result);
             return result;
         }
 
@@ -410,7 +465,7 @@ namespace CppLib
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected CppOp(void* native, bool skipVTables = false)
@@ -424,14 +479,14 @@ namespace CppLib
         {
             __Instance = Marshal.AllocHGlobal(sizeof(global::CppLib.CppOp.__Internal));
             __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         public CppOp(global::CppLib.CppOp _0)
         {
             __Instance = Marshal.AllocHGlobal(sizeof(global::CppLib.CppOp.__Internal));
             __ownsNativeInstance = true;
-            NativeToManagedMap[__Instance] = this;
+            __RecordNativeToManagedMapping(__Instance, this);
             *((global::CppLib.CppOp.__Internal*) __Instance) = *((global::CppLib.CppOp.__Internal*) _0.__Instance);
         }
 
