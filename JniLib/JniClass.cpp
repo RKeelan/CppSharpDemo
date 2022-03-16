@@ -111,7 +111,7 @@ void setOwnsNativeInstance(JNIEnv *env, jobject obj, jboolean ownsNativeIstance)
 // JNI API
 
 extern "C" JNIEXPORT
-void JNICALL Java_NativeClass_jniCreateNativeObject(JNIEnv * env, jobject obj)
+void JNICALL Java_NativeClass_jniCreateNativeObject(JNIEnv *env, jobject obj)
 {
     NativeClass* nativeObj = new NativeClass();
     setNativeObj(env, obj, nativeObj);
@@ -119,24 +119,85 @@ void JNICALL Java_NativeClass_jniCreateNativeObject(JNIEnv * env, jobject obj)
 }
 
 extern "C" JNIEXPORT
-jint JNICALL Java_NativeClass_getInt(JNIEnv *env, jobject obj)
+jfloat JNICALL Java_NativeClass_getNumber(JNIEnv * env, jobject obj)
 {
-    NativeClass* native_obj = getNativeObj<NativeClass>(env, obj);
-
-    if (native_obj != nullptr && !env->ExceptionCheck()) {
-        return native_obj->GetInt();
+    NativeClass* nativeObj = getNativeObj<NativeClass>(env, obj);
+    if (nativeObj != nullptr && !env->ExceptionCheck()) {
+        return nativeObj->number;
     }
     else {
         if (!env->ExceptionCheck()) {
             throwNullPointerException(env, "NativeClass");
-            return (jint)1;
         }
         return (jint)0;
     }
 }
 
 extern "C" JNIEXPORT
-jint JNICALL Java_NativeClass_throwJavaException(JNIEnv * env, jobject obj)
+void JNICALL Java_NativeClass_setNumber(JNIEnv * env, jobject obj, jfloat number)
+{
+    NativeClass* nativeObj = getNativeObj<NativeClass>(env, obj);
+    if (nativeObj != nullptr && !env->ExceptionCheck()) {
+        nativeObj->number = number;
+    }
+    else if (!env->ExceptionCheck()) {
+        throwNullPointerException(env, "NativeClass");
+    }
+}
+
+extern "C" JNIEXPORT
+jint JNICALL Java_NativeClass_getInt(JNIEnv *env, jobject obj)
+{
+    NativeClass* nativeObj = getNativeObj<NativeClass>(env, obj);
+    if (nativeObj != nullptr && !env->ExceptionCheck()) {
+        return nativeObj->GetInt();
+    }
+    else {
+        if (!env->ExceptionCheck()) {
+            throwNullPointerException(env, "NativeClass");
+        }
+        return (jint)0;
+    }
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_NativeClass_setInt(JNIEnv *env, jobject obj, jint value)
+{
+    NativeClass* nativeObj = getNativeObj<NativeClass>(env, obj);
+    if (nativeObj != nullptr && !env->ExceptionCheck()) {
+        nativeObj->SetInt((int)value);
+    }
+    else if (!env->ExceptionCheck()) {
+        throwNullPointerException(env, "NativeClass");
+    }
+}
+
+extern "C" JNIEXPORT
+jint JNICALL Java_NativeClass_square(JNIEnv *env, jobject obj, jint n)
+{
+    NativeClass* nativeObj = getNativeObj<NativeClass>(env, obj);
+    if (nativeObj != nullptr && !env->ExceptionCheck()) {
+        return nativeObj->Square(n);
+    }
+    else if (!env->ExceptionCheck()) {
+        throwNullPointerException(env, "NativeClass");
+    }
+}
+
+extern "C" JNIEXPORT
+jfloat JNICALL Java_NativeClass_halve(JNIEnv *env, jobject obj, jfloat n)
+{
+    NativeClass* nativeObj = getNativeObj<NativeClass>(env, obj);
+    if (nativeObj != nullptr && !env->ExceptionCheck()) {
+        return nativeObj->Halve(n);
+    }
+    else if (!env->ExceptionCheck()) {
+        throwNullPointerException(env, "NativeClass");
+    }
+}
+
+extern "C" JNIEXPORT
+jint JNICALL Java_NativeClass_throwJavaException(JNIEnv *env, jobject obj)
 {
     return throwNullPointerException(env, "NativeClass");
 }
