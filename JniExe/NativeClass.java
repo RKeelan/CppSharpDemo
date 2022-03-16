@@ -7,22 +7,38 @@ public class NativeClass {
     private boolean ownsNativeInstance;
 
     private native void jniCreateNativeObject();
-    public native float getNumber();
-    public native void setNumber(float value);
-    public native int getInt();
-    public native void setInt(int value);
-    public native int square(int n);
-    public native float halve(float n);
-    public native int throwJavaException();
+    private native void jniDestroyNativeObject();
+    private native float getNumber();
+    private native void setNumber(float value);
+    private native int getInt();
+    private native void setInt(int value);
+    private native int square(int n);
+    private native float halve(float n);
+    private native int throwJavaException();
 
     public NativeClass() {
         jniCreateNativeObject();
     }
 
-    public static void main(String[] args) {
-        NativeClass nc = new NativeClass();
+    public void dispose() {
+        if (!ownsNativeInstance) {
+            // The Java wrapper doesn't own the instance
+            return;
+        }
 
+        if (nativeObjAddr == 0) {
+            // Object was already disposed
+            return;
+        }
+
+        jniDestroyNativeObject();
+    }
+
+    public static void main(String[] args) {
         try {
+            NativeClass nc = new NativeClass();
+            System.out.println("Native class instantiated");
+
             nc.setInt(5);
             int ncInt = nc.getInt();
             System.out.println(String.format("Expected Int to be 5 and it was %d", ncInt));
@@ -33,11 +49,13 @@ public class NativeClass {
 
             System.out.println(String.format("5^2 = %d", nc.square(5)));
             System.out.println(String.format("11 ÷ 2 = %f", nc.halve(11f)));
+
+            nc.dispose();
+            System.out.println("Native class disposed");
         }
         catch (Exception ex) {
             ex.printStackTrace(System.out);
         }
-
     }
 
     public void makeThisAUt() {

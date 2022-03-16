@@ -119,6 +119,19 @@ void JNICALL Java_NativeClass_jniCreateNativeObject(JNIEnv *env, jobject obj)
 }
 
 extern "C" JNIEXPORT
+void JNICALL Java_NativeClass_jniDestroyNativeObject(JNIEnv *env, jobject obj)
+{
+    NativeClass* nativeObj = getNativeObj<NativeClass>(env, obj);
+    if (nativeObj != nullptr) {
+        delete nativeObj;
+        nativeObj = nullptr;
+    }
+    // Make the native object address null in the Java wrapper
+    setNativeObj(env, obj, nativeObj);
+    setOwnsNativeInstance(env, obj, JNI_FALSE);
+}
+
+extern "C" JNIEXPORT
 jfloat JNICALL Java_NativeClass_getNumber(JNIEnv * env, jobject obj)
 {
     NativeClass* nativeObj = getNativeObj<NativeClass>(env, obj);
