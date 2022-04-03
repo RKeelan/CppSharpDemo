@@ -42,3 +42,87 @@ void JNICALL Java_CppData_setBoolJni(JNIEnv *env, jobject obj, jboolean value)
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
     nativeInstance->SetBool(value);
 }
+
+extern "C" JNIEXPORT
+int8_t JNICALL Java_CppData_getInt8Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetInt8();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setInt8Jni(JNIEnv *env, jobject obj, int8_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetInt8(value);
+}
+
+extern "C" JNIEXPORT
+int16_t JNICALL Java_CppData_getInt16Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetInt16();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setInt16Jni(JNIEnv *env, jobject obj, int16_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetInt16(value);
+}
+
+extern "C" JNIEXPORT
+int32_t JNICALL Java_CppData_getInt32Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetInt32();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setInt32Jni(JNIEnv *env, jobject obj, int32_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetInt32(value);
+}
+
+extern "C" JNIEXPORT
+int64_t JNICALL Java_CppData_getInt64Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetInt64();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setInt64Jni(JNIEnv *env, jobject obj, int64_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetInt64(value);
+}
+
+extern "C" JNIEXPORT
+jfloat JNICALL Java_CppData_getFloatJni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetFloat();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setFloatJni(JNIEnv *env, jobject obj, jfloat value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetFloat(value);
+}
+
+extern "C" JNIEXPORT
+jdouble JNICALL Java_CppData_getDoubleJni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetDouble();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setDoubleJni(JNIEnv *env, jobject obj, jdouble value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetDouble(value);
+}

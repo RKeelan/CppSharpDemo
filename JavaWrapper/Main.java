@@ -9,9 +9,45 @@ public class Main {
         CppData data = new CppData();
         System.out.println("Object created");
 
-        System.out.println("getBool initital value: " + data.getBool());
+        System.out.println("Bool initital value: " + data.getBool());
         data.setBool(true);
-        System.out.println("getBool updated value: " + data.getBool());
+        System.out.println("Bool updated value: " + data.getBool());
+
+        System.out.println("Int8 initital value: " + data.getInt8());
+        data.setInt8(Byte.MAX_VALUE);
+        System.out.println("Int8 max value: " + data.getInt8());
+        data.setInt8(Byte.MIN_VALUE);
+        System.out.println("Int8 min value: " + data.getInt8());
+
+        System.out.println("Int16 initital value: " + data.getInt16());
+        data.setInt16(Short.MAX_VALUE);
+        System.out.println("Int16 max value: " + data.getInt16());
+        data.setInt16(Short.MIN_VALUE);
+        System.out.println("Int16 min value: " + data.getInt16());
+
+        System.out.println("Int32 initital value: " + data.getInt32());
+        data.setInt32(Integer.MAX_VALUE);
+        System.out.println("Int32 max value value: " + data.getInt32());
+        data.setInt32(Integer.MIN_VALUE);
+        System.out.println("Int32 min value value: " + data.getInt32());
+
+        System.out.println("Int64 initital value: " + data.getInt64());
+        data.setInt64(Long.MAX_VALUE);
+        System.out.println("Int64 max value: " + data.getInt64());
+        data.setInt64(Long.MIN_VALUE);
+        System.out.println("Int64 min value: " + data.getInt64());
+
+        System.out.println("Float initital value: " + data.getFloat());
+        data.setFloat(Float.MAX_VALUE);
+        System.out.println("Float max value: " + data.getFloat());
+        data.setFloat(Float.MIN_VALUE);
+        System.out.println("Float min value: " + data.getFloat());
+
+        System.out.println("Double initital value: " + data.getDouble());
+        data.setDouble(Double.MAX_VALUE);
+        System.out.println("Double max value: " + data.getDouble());
+        data.setDouble(Double.MIN_VALUE);
+        System.out.println("Double min value: " + data.getDouble());
 
         data.close();
         System.out.println("Object disposed");
