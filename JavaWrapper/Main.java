@@ -81,6 +81,12 @@ public class Main {
         data.setDouble(Double.MIN_VALUE);
         System.out.println("Double min value: " + data.getDouble());
 
+        // Boolean public properties
+
+        System.out.println("Pub Bool initital value: " + data.getPubBool());
+        data.setPubBool(true);
+        System.out.println("Pub Bool updated value: " + data.getPubBool());
+
         data.close();
         System.out.println("Object disposed");
 

@@ -182,3 +182,17 @@ void JNICALL Java_CppData_setDoubleJni(JNIEnv *env, jobject obj, jdouble value)
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
     nativeInstance->SetDouble(value);
 }
+
+extern "C" JNIEXPORT
+jboolean JNICALL Java_CppData_getPubBoolJni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_bool;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubBoolJni(JNIEnv *env, jobject obj, jboolean value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_bool = value;
+}

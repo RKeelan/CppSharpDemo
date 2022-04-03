@@ -165,4 +165,16 @@ public class CppData {
     {
         setDoubleJni(value);
     }
+
+    private native boolean getPubBoolJni();
+    public boolean getPubBool()
+    {
+        return getPubBoolJni();
+    }
+
+    private native void setPubBoolJni(boolean value);
+    public void setPubBool(boolean value)
+    {
+        setPubBoolJni(value);
+    }
 }
