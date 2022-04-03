@@ -12,14 +12,12 @@ public class CppData {
     private boolean ownsNativeInstance;
 
     private native void jniCreateInstance();
-
     public CppData()
     {
         jniCreateInstance();
     }
 
     private native void jniDestroyInstance();
-
     public void close()
     {
         if (!ownsNativeInstance)
@@ -35,5 +33,17 @@ public class CppData {
         }
 
         jniDestroyInstance();
+    }
+
+    private native boolean jniGetBool();
+    public boolean getBool()
+    {
+        return jniGetBool();
+    }
+
+    private native void jniSetBool(boolean value);
+    public void setBool(boolean value)
+    {
+        jniSetBool(value);
     }
 }

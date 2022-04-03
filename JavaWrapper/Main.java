@@ -9,6 +9,10 @@ public class Main {
         CppData data = new CppData();
         System.out.println("Object created");
 
+        System.out.println("getBool initital value: " + data.getBool());
+        data.setBool(true);
+        System.out.println("getBool updated value: " + data.getBool());
+
         data.close();
         System.out.println("Object disposed");
 
