@@ -29,10 +29,10 @@ void CppOp::Reset(CppData &data, ScopeFlags scope) {
     }
 
     if (InScope(scope, ScopeFlags::Uint)) {
-        //data.SetUint8(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
-        //data.SetUint16(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
-        //data.SetUint32(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
-        //data.SetUint64(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetUint8(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetUint16(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetUint32(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
+        data.SetUint64(CPP_DATA_NUMERIC_TYPE_RESET_VALUE);
     }
 
     if (InScope(scope, ScopeFlags::Float)) {
@@ -62,10 +62,10 @@ void CppOp::Increment(CppData &data, ScopeFlags scope) {
     }
 
     if (InScope(scope, ScopeFlags::Uint)) {
-        //data.SetUint8(data.GetUint8() + 1);
-        //data.SetUint16(data.GetUint16() + 1);
-        //data.SetUint32(data.GetUint32() + 1);
-        //data.SetUint64(data.GetUint64() + 1);
+        data.SetUint8(data.GetUint8() + 1);
+        data.SetUint16(data.GetUint16() + 1);
+        data.SetUint32(data.GetUint32() + 1);
+        data.SetUint64(data.GetUint64() + 1);
     }
 
     if (InScope(scope, ScopeFlags::Float)) {

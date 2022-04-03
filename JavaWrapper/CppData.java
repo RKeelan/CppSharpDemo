@@ -58,6 +58,18 @@ public class CppData {
         setInt8Jni(value);
     }
 
+    private native byte getUint8Jni();
+    public byte getUint8()
+    {
+        return getUint8Jni();
+    }
+
+    private native void setUint8Jni(byte value);
+    public void setUint8(byte value)
+    {
+        setUint8Jni(value);
+    }
+
     private native short getInt16Jni();
     public short getInt16()
     {
@@ -68,6 +80,18 @@ public class CppData {
     public void setInt16(short value)
     {
         setInt16Jni(value);
+    }
+
+    private native short getUint16Jni();
+    public short getUint16()
+    {
+        return getUint16Jni();
+    }
+
+    private native void setUint16Jni(short value);
+    public void setUint16(short value)
+    {
+        setUint16Jni(value);
     }
 
     private native int getInt32Jni();
@@ -82,6 +106,18 @@ public class CppData {
         setInt32Jni(value);
     }
 
+    private native int getUint32Jni();
+    public int getUint32()
+    {
+        return getUint32Jni();
+    }
+
+    private native void setUint32Jni(int value);
+    public void setUint32(int value)
+    {
+        setUint32Jni(value);
+    }
+
     private native long getInt64Jni();
     public long getInt64()
     {
@@ -92,6 +128,18 @@ public class CppData {
     public void setInt64(long value)
     {
         setInt64Jni(value);
+    }
+
+    private native long getUint64Jni();
+    public long getUint64()
+    {
+        return getUint64Jni();
+    }
+
+    private native void setUint64Jni(long value);
+    public void setUint64(long value)
+    {
+        setUint64Jni(value);
     }
 
     private native float getFloatJni();

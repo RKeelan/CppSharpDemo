@@ -58,6 +58,20 @@ void JNICALL Java_CppData_setInt8Jni(JNIEnv *env, jobject obj, int8_t value)
 }
 
 extern "C" JNIEXPORT
+uint8_t JNICALL Java_CppData_getUint8Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetUint8();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setUint8Jni(JNIEnv *env, jobject obj, uint8_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetUint8(value);
+}
+
+extern "C" JNIEXPORT
 int16_t JNICALL Java_CppData_getInt16Jni(JNIEnv *env, jobject obj)
 {
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
@@ -69,6 +83,20 @@ void JNICALL Java_CppData_setInt16Jni(JNIEnv *env, jobject obj, int16_t value)
 {
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
     nativeInstance->SetInt16(value);
+}
+
+extern "C" JNIEXPORT
+uint16_t JNICALL Java_CppData_getUint16Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetUint16();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setUint16Jni(JNIEnv *env, jobject obj, uint16_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetUint16(value);
 }
 
 extern "C" JNIEXPORT
@@ -86,6 +114,20 @@ void JNICALL Java_CppData_setInt32Jni(JNIEnv *env, jobject obj, int32_t value)
 }
 
 extern "C" JNIEXPORT
+uint32_t JNICALL Java_CppData_getUint32Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetUint32();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setUint32Jni(JNIEnv *env, jobject obj, uint32_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetUint32(value);
+}
+
+extern "C" JNIEXPORT
 int64_t JNICALL Java_CppData_getInt64Jni(JNIEnv *env, jobject obj)
 {
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
@@ -97,6 +139,20 @@ void JNICALL Java_CppData_setInt64Jni(JNIEnv *env, jobject obj, int64_t value)
 {
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
     nativeInstance->SetInt64(value);
+}
+
+extern "C" JNIEXPORT
+uint64_t JNICALL Java_CppData_getUint64Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->GetUint64();
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setUint64Jni(JNIEnv *env, jobject obj, uint64_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->SetUint64(value);
 }
 
 extern "C" JNIEXPORT
