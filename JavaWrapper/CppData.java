@@ -11,39 +11,38 @@ public class CppData {
     private long nativeInstanceAddr;
     private boolean ownsNativeInstance;
 
-    private native void jniCreateInstance();
+    private native void createInstanceJni();
     public CppData()
     {
-        jniCreateInstance();
+        createInstanceJni();
     }
 
-    private native void jniDestroyInstance();
+    private native void destroyInstanceJni();
+
     public void close()
     {
         if (!ownsNativeInstance)
         {
-            // The Java wrapper doesn't own the instance
             return;
         }
 
         if (nativeInstanceAddr == 0)
         {
-            // Object was already disposed
             return;
         }
 
-        jniDestroyInstance();
+        destroyInstanceJni();
     }
 
-    private native boolean jniGetBool();
+    private native boolean getBoolJni();
     public boolean getBool()
     {
-        return jniGetBool();
+        return getBoolJni();
     }
 
-    private native void jniSetBool(boolean value);
+    private native void setBoolJni(boolean value);
     public void setBool(boolean value)
     {
-        jniSetBool(value);
+        setBoolJni(value);
     }
 }

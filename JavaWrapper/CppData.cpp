@@ -9,7 +9,7 @@
 #include "CppData.h"
 
 extern "C" JNIEXPORT
-void JNICALL Java_CppData_jniCreateInstance(JNIEnv *env, jobject obj)
+void JNICALL Java_CppData_createInstanceJni(JNIEnv *env, jobject obj)
 {
     CppData* nativeInstance = new CppData();
     CppSharp::Runtime::setNativeInstance(env, obj, nativeInstance);
@@ -17,27 +17,27 @@ void JNICALL Java_CppData_jniCreateInstance(JNIEnv *env, jobject obj)
 }
 
 extern "C" JNIEXPORT
-void JNICALL Java_CppData_jniDestroyInstance(JNIEnv *env, jobject obj)
+void JNICALL Java_CppData_destroyInstanceJni(JNIEnv *env, jobject obj)
 {
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
     if (nativeInstance != nullptr) {
         delete nativeInstance;
         nativeInstance = nullptr;
     }
-    // Make the native object address null in the Java wrapper
+
     CppSharp::Runtime::setNativeInstance(env, obj, nativeInstance);
     CppSharp::Runtime::setOwnsNativeInstance(env, obj, JNI_FALSE);
 }
 
 extern "C" JNIEXPORT
-jboolean JNICALL Java_CppData_jniGetBool(JNIEnv * env, jobject obj)
+jboolean JNICALL Java_CppData_getBoolJni(JNIEnv *env, jobject obj)
 {
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
     return nativeInstance->GetBool();
 }
 
 extern "C" JNIEXPORT
-void JNICALL Java_CppData_jniSetBool(JNIEnv * env, jobject obj, jboolean value)
+void JNICALL Java_CppData_setBoolJni(JNIEnv *env, jobject obj, jboolean value)
 {
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
     nativeInstance->SetBool(value);
