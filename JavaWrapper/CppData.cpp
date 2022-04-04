@@ -196,3 +196,143 @@ void JNICALL Java_CppData_setPubBoolJni(JNIEnv *env, jobject obj, jboolean value
     CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
     nativeInstance->pub_bool = value;
 }
+
+extern "C" JNIEXPORT
+int8_t JNICALL Java_CppData_getPubI8Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_i8;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubI8Jni(JNIEnv *env, jobject obj, int8_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_i8 = value;
+}
+
+extern "C" JNIEXPORT
+uint8_t JNICALL Java_CppData_getPubU8Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_u8;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubU8Jni(JNIEnv *env, jobject obj, uint8_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_u8 = value;
+}
+
+extern "C" JNIEXPORT
+int16_t JNICALL Java_CppData_getPubI16Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_i16;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubI16Jni(JNIEnv *env, jobject obj, int16_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_i16 = value;
+}
+
+extern "C" JNIEXPORT
+uint16_t JNICALL Java_CppData_getPubU16Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_u16;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubU16Jni(JNIEnv *env, jobject obj, uint16_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_u16 = value;
+}
+
+extern "C" JNIEXPORT
+int32_t JNICALL Java_CppData_getPubI32Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_i32;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubI32Jni(JNIEnv *env, jobject obj, int32_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_i32 = value;
+}
+
+extern "C" JNIEXPORT
+uint32_t JNICALL Java_CppData_getPubU32Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_u32;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubU32Jni(JNIEnv *env, jobject obj, uint32_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_u32 = value;
+}
+
+extern "C" JNIEXPORT
+int64_t JNICALL Java_CppData_getPubI64Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_i64;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubI64Jni(JNIEnv *env, jobject obj, int64_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_i64 = value;
+}
+
+extern "C" JNIEXPORT
+uint64_t JNICALL Java_CppData_getPubU64Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_u64;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubU64Jni(JNIEnv *env, jobject obj, uint64_t value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_u64 = value;
+}
+
+extern "C" JNIEXPORT
+jfloat JNICALL Java_CppData_getPubF32Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_f32;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubF32Jni(JNIEnv *env, jobject obj, jfloat value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_f32 = value;
+}
+
+extern "C" JNIEXPORT
+jdouble JNICALL Java_CppData_getPubF64Jni(JNIEnv *env, jobject obj)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    return nativeInstance->pub_f64;
+}
+
+extern "C" JNIEXPORT
+void JNICALL Java_CppData_setPubF64Jni(JNIEnv *env, jobject obj, jdouble value)
+{
+    CppData* nativeInstance = CppSharp::Runtime::getNativeInstance<CppData>(env, obj);
+    nativeInstance->pub_f64 = value;
+}

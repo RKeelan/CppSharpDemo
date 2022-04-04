@@ -87,6 +87,72 @@ public class Main {
         data.setPubBool(true);
         System.out.println("Pub Bool updated value: " + data.getPubBool());
 
+        // Signed integer properties
+
+        System.out.println("Pub Int8 initital value: " + data.getPubI8());
+        data.setPubI8(Byte.MAX_VALUE);
+        System.out.println("Pub Int8 max value: " + data.getPubI8());
+        data.setPubI8(Byte.MIN_VALUE);
+        System.out.println("Pub Int8 min value: " + data.getPubI8());
+
+        System.out.println("Pub Int16 initital value: " + data.getPubI16());
+        data.setPubI16(Short.MAX_VALUE);
+        System.out.println("Pub Int16 max value: " + data.getPubI16());
+        data.setPubI16(Short.MIN_VALUE);
+        System.out.println("Pub Int16 min value: " + data.getPubI16());
+
+        System.out.println("Pub Int32 initital value: " + data.getPubI32());
+        data.setPubI32(Integer.MAX_VALUE);
+        System.out.println("Pub Int32 max value value: " + data.getPubI32());
+        data.setPubI32(Integer.MIN_VALUE);
+        System.out.println("Pub Int32 min value value: " + data.getPubI32());
+
+        System.out.println("Pub Int64 initital value: " + data.getPubI64());
+        data.setPubI64(Long.MAX_VALUE);
+        System.out.println("Pub Int64 max value: " + data.getPubI64());
+        data.setPubI64(Long.MIN_VALUE);
+        System.out.println("Pub Int64 min value: " + data.getPubI64());
+
+        // Unsigned integer properties
+
+        System.out.println("Pub Uint8 initital value: " + data.getPubU8());
+        data.setPubU8(Byte.MAX_VALUE);
+        System.out.println("Pub Uint8 max value: " + data.getPubU8());
+        data.setPubU8(Byte.MIN_VALUE);
+        System.out.println("Pub Uint8 min value: " + data.getPubU8());
+
+        System.out.println("Pub Uint16 initital value: " + data.getPubU16());
+        data.setPubU16(Short.MAX_VALUE);
+        System.out.println("Pub Uint16 max value: " + data.getPubU16());
+        data.setPubU16(Short.MIN_VALUE);
+        System.out.println("Pub Uint16 min value: " + data.getPubU16());
+
+        System.out.println("Pub Uint32 initital value: " + data.getPubU32());
+        data.setPubU32(Integer.MAX_VALUE);
+        System.out.println("Pub Uint32 max value value: " + data.getPubU32());
+        data.setPubU32(Integer.MIN_VALUE);
+        System.out.println("Pub Uint32 min value value: " + data.getPubU32());
+
+        System.out.println("Pub Uint64 initital value: " + data.getPubU64());
+        data.setPubU64(Long.MAX_VALUE);
+        System.out.println("Pub Uint64 max value: " + data.getPubU64());
+        data.setPubU64(Long.MIN_VALUE);
+        System.out.println("Pub Uint64 min value: " + data.getPubU64());
+
+        // Floating point properties
+
+        System.out.println("Pub Float initital value: " + data.getPubF32());
+        data.setPubF32(Float.MAX_VALUE);
+        System.out.println("Pub Float max value: " + data.getPubF32());
+        data.setPubF32(Float.MIN_VALUE);
+        System.out.println("Pub Float min value: " + data.getPubF32());
+
+        System.out.println("Pub Double initital value: " + data.getPubF64());
+        data.setPubF64(Double.MAX_VALUE);
+        System.out.println("Pub Double max value: " + data.getPubF64());
+        data.setPubF64(Double.MIN_VALUE);
+        System.out.println("Pub Double min value: " + data.getPubF64());
+
         data.close();
         System.out.println("Object disposed");
 

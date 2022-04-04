@@ -177,4 +177,124 @@ public class CppData {
     {
         setPubBoolJni(value);
     }
+
+    private native byte getPubI8Jni();
+    public byte getPubI8()
+    {
+        return getPubI8Jni();
+    }
+
+    private native void setPubI8Jni(byte value);
+    public void setPubI8(byte value)
+    {
+        setPubI8Jni(value);
+    }
+
+    private native byte getPubU8Jni();
+    public byte getPubU8()
+    {
+        return getPubU8Jni();
+    }
+
+    private native void setPubU8Jni(byte value);
+    public void setPubU8(byte value)
+    {
+        setPubU8Jni(value);
+    }
+
+    private native short getPubI16Jni();
+    public short getPubI16()
+    {
+        return getPubI16Jni();
+    }
+
+    private native void setPubI16Jni(short value);
+    public void setPubI16(short value)
+    {
+        setPubI16Jni(value);
+    }
+
+    private native short getPubU16Jni();
+    public short getPubU16()
+    {
+        return getPubU16Jni();
+    }
+
+    private native void setPubU16Jni(short value);
+    public void setPubU16(short value)
+    {
+        setPubU16Jni(value);
+    }
+
+    private native int getPubI32Jni();
+    public int getPubI32()
+    {
+        return getPubI32Jni();
+    }
+
+    private native void setPubI32Jni(int value);
+    public void setPubI32(int value)
+    {
+        setPubI32Jni(value);
+    }
+
+    private native int getPubU32Jni();
+    public int getPubU32()
+    {
+        return getPubU32Jni();
+    }
+
+    private native void setPubU32Jni(int value);
+    public void setPubU32(int value)
+    {
+        setPubU32Jni(value);
+    }
+
+    private native long getPubI64Jni();
+    public long getPubI64()
+    {
+        return getPubI64Jni();
+    }
+
+    private native void setPubI64Jni(long value);
+    public void setPubI64(long value)
+    {
+        setPubI64Jni(value);
+    }
+
+    private native long getPubU64Jni();
+    public long getPubU64()
+    {
+        return getPubU64Jni();
+    }
+
+    private native void setPubU64Jni(long value);
+    public void setPubU64(long value)
+    {
+        setPubU64Jni(value);
+    }
+
+    private native float getPubF32Jni();
+    public float getPubF32()
+    {
+        return getPubF32Jni();
+    }
+
+    private native void setPubF32Jni(float value);
+    public void setPubF32(float value)
+    {
+        setPubF32Jni(value);
+    }
+
+    private native double getPubF64Jni();
+    public double getPubF64()
+    {
+        return getPubF64Jni();
+    }
+
+    private native void setPubF64Jni(double value);
+    public void setPubF64(double value)
+    {
+        setPubF64Jni(value);
+    }
 }
