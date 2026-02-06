@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/CppTest"
+    schedule:
+      interval: "daily"
+      time: "05:00"
+  - package-ecosystem: "nuget"
+    directory: "/CsWrapper"
+    schedule:
+      interval: "daily"
+      time: "05:00"
+  - package-ecosystem: "nuget"
+    directory: "/WrapperGen"
+    schedule:
+      interval: "daily"
+      time: "05:00"
