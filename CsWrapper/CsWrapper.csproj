@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CppSharp.Runtime" Version="1.0.3" />
+    <PackageReference Include="CppSharp.Runtime" Version="1.1.84.17100" />
   </ItemGroup>
 
 </Project>
