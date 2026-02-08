@@ -1,5 +1,7 @@
 # CppSharpDemo
 
+[![CI](https://github.com/RKeelan/CppSharpDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/RKeelan/CppSharpDemo/actions/workflows/ci.yml)
+
 ## TODO
 
 - Make a Java wrapper
